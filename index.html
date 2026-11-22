@@ -494,6 +494,15 @@ body.go nav a:nth-child(5){animation-delay:.42s}
 .ti{display:flex;gap:8px;align-items:center;padding:10px 16px;border-top:1px solid var(--line);color:var(--accent)}
 .ti input{flex:1;background:none;border:0;outline:0;color:#fff;font:inherit;caret-color:var(--accent)}
 html[lang="bn"] .hi,html[lang="bn"] .dots a::before,html[lang="bn"] .rg h4,html[lang="bn"] .cue,html[lang="bn"] .rib{letter-spacing:0;text-transform:none}
+
+/* ===== v17 ===== */
+.price{font-size:34px;font-weight:700;line-height:1.1;margin:2px 0 16px;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.price small{font-size:12px;font-weight:400;margin-left:10px;color:var(--mute);-webkit-text-fill-color:var(--mute)}
+.price.sw{animation:cardIn .5s var(--ease)}
+.pk .tabs{justify-content:flex-start;margin-bottom:18px}
+.pkc li{line-height:1.45}
+#fmsg.ok{color:var(--accent)}#fmsg.err{color:#ff8a8a}
+#fmsg a{color:var(--accent);text-decoration:underline}
 </style>
 </head>
 <body>
@@ -565,18 +574,19 @@ html[lang="bn"] .hi,html[lang="bn"] .dots a::before,html[lang="bn"] .rg h4,html[
     </div>
   <div id="pk" class="pk rv">
       <h3 class="tt" data-bn="একটি <span class='g2'>প্যাকেজ</span> বেছে নিন">Choose a <span class="g2">package</span></h3>
+      <div class="tabs lt" id="cur"><button type="button" class="on" data-c="usd">USD $</button><button type="button" data-c="bdt">BDT ৳</button></div>
       <div class="pkg">
-        <div class="card pkc tilt"><h4 data-bn="বেসিক ক্লিন">Basic Clean</h4><div class="price" data-price="basic" data-bn="দাম জানতে যোগাযোগ করুন">Contact for price</div>
-          <ul data-bn="<li>সিস্টেম ও টেম্প ফাইল পরিষ্কার</li><li>স্টার্টআপ পরিষ্কার</li><li>ডিস্ক ক্লিনআপ</li>"><li>Clean system and temp files</li><li>Startup cleanup</li><li>Disk cleanup</li></ul>
-          <a class="btn order" data-pkg="Basic Clean" href="#">Order this package</a></div>
-        <div class="card pkc hot tilt"><span class="rib" data-bn="জনপ্রিয়">Popular</span><h4 data-bn="ফুল অপ্টিমাইজ">Full Optimize</h4><div class="price" data-price="full" data-bn="দাম জানতে যোগাযোগ করুন">Contact for price</div>
-          <ul data-bn="<li>বেসিক ক্লিনের সবকিছু</li><li>র‍্যাম ও সিপিইউ টিউনিং</li><li>ড্রাইভার ও আপডেট চেক</li><li>ম্যালওয়্যার চেক</li><li>সেটিংস টিউনিং</li>"><li>Everything in Basic Clean</li><li>RAM and CPU tuning</li><li>Drivers and updates check</li><li>Malware check</li><li>Settings tuning</li></ul>
-          <a class="btn p order" data-pkg="Full Optimize" href="#">Order this package</a></div>
-        <div class="card pkc tilt"><h4 data-bn="গেমিং টিউন">Gaming Tune</h4><div class="price" data-price="gaming" data-bn="দাম জানতে যোগাযোগ করুন">Contact for price</div>
-          <ul data-bn="<li>ফুল অপ্টিমাইজের সবকিছু</li><li>ল্যাটেন্সি ও ইনপুট-ল্যাগ টুইক</li><li>FPS ও পিং টুইক</li><li>জিপিইউ সেটিংস</li>"><li>Everything in Full Optimize</li><li>Latency and input-lag tweaks</li><li>FPS and ping tweaks</li><li>GPU settings</li></ul>
-          <a class="btn order" data-pkg="Gaming Tune" href="#">Order this package</a></div>
+        <div class="card pkc tilt"><h4 data-bn="বেসিক অপ্টিমাইজেশন">Basic Optimization</h4><div class="price" data-usd="5"></div>
+          <ul data-bn="<li>সিস্টেম ও টেম্প ফাইল পরিষ্কার</li><li>স্টার্টআপ অ্যাপ পরিষ্কার</li><li>ডিস্ক ক্লিনআপ</li>"><li>Clean system and temp files</li><li>Startup apps cleanup</li><li>Disk cleanup</li></ul>
+          <a class="btn order" data-pkg="Basic Optimization" href="#">Order</a></div>
+        <div class="card pkc hot tilt"><span class="rib" data-bn="জনপ্রিয়">Popular</span><h4 data-bn="ফুল অপ্টিমাইজেশন">Full Optimization</h4><div class="price" data-usd="9"></div>
+          <ul data-bn="<li>বেসিক অপ্টিমাইজেশনের সবকিছু</li><li>ডিপ ক্লিনআপ: ক্যাশ, লগ ও আপডেটের বাড়তি ফাইল</li><li>স্টার্টআপ ও ব্যাকগ্রাউন্ড সার্ভিস টিউনিং</li><li>র‍্যাম ও সিপিইউ টিউনিং: প্রায়োরিটি, পাওয়ার প্ল্যান, কোর পার্কিং</li><li>ড্রাইভার চেক ও আপডেট: জিপিইউ, চিপসেট, নেটওয়ার্ক</li><li>ব্লোটওয়্যার ও অপ্রয়োজনীয় অ্যাপ সরানো</li><li>রেজিস্ট্রি ও সিস্টেম সেটিংস টিউনিং</li><li>ম্যালওয়্যার স্ক্যান ও সিকিউরিটি চেক</li><li>ডিস্ক অপ্টিমাইজেশন ও নেটওয়ার্ক ল্যাটেন্সি টুইক</li><li>যেকোনো পরিবর্তনের আগে রিস্টোর পয়েন্ট</li>"><li>Everything in Basic Optimization</li><li>Deep cleanup: caches, logs and update leftovers</li><li>Startup and background services tuning</li><li>RAM and CPU tuning: priority, power plan, core parking</li><li>Driver check and update: GPU, chipset, network</li><li>Bloatware and unused app removal</li><li>Registry and system settings tuning</li><li>Malware scan and security check</li><li>Disk optimization and network latency tweaks</li><li>Restore point before any change</li></ul>
+          <a class="btn p order" data-pkg="Full Optimization" href="#">Order</a></div>
+        <div class="card pkc tilt"><h4 data-bn="গেমিং টিউন">Gaming Tune</h4><div class="price" data-usd="12"></div>
+          <ul data-bn="<li>ফুল অপ্টিমাইজেশনের সবকিছু</li><li>ল্যাটেন্সি ও ইনপুট-ল্যাগ টুইক</li><li>FPS ও পিং টুইক</li><li>জিপিইউ সেটিংস ও ড্রাইভার প্রোফাইল</li><li>গেম মোড, টাইমার ও প্রায়োরিটি টিউনিং</li>"><li>Everything in Full Optimization</li><li>Latency and input-lag tweaks</li><li>FPS and ping tweaks</li><li>GPU settings and driver profile</li><li>Game mode, timer and priority tuning</li></ul>
+          <a class="btn order" data-pkg="Gaming Tune" href="#">Order</a></div>
       </div>
-      <p class="fine" data-bn="আপনার পিসির মডেল আর কী দরকার তা জানান, আমি সঠিক প্যাকেজটি সাজেস্ট করব।">Message me with your PC model and what you need, and I will suggest the right package.</p>
+      <p class="fine" data-bn="আপনার পিসির মডেল আর কী দরকার তা জানান, আমি সঠিক প্যাকেজটি সাজেস্ট করব। BDT দাম আনুমানিক, বর্তমান রেট অনুযায়ী।">Message me with your PC model and what you need, and I will suggest the right package. BDT prices are approximate, based on the current rate.</p>
     </div>
   </section>
 
@@ -650,19 +660,19 @@ html[lang="bn"] .hi,html[lang="bn"] .dots a::before,html[lang="bn"] .rg h4,html[
 <section id="contact">
   <div class="rv"><h2>Get in <span>Touch</span></h2><p class="sub">Questions or ideas? Reach out on any of these.</p></div>
   <div class="contact rv">
-    <a class="card tilt" href="mailto:ahtgamingyt2@gmail.com"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><h3>Email</h3><p>ahtgamingyt2@gmail.com</p></a>
+    <a class="card tilt" href="https://mail.google.com/mail/?view=cm&fs=1&to=ahtgamingyt2@gmail.com" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><h3>Email</h3><p>ahtgamingyt2@gmail.com</p></a>
     <a class="card tilt" href="https://www.facebook.com/wizard.1294" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span><h3>Facebook</h3><p>Abid Hassan</p></a>
     <a class="card tilt" href="https://www.instagram.com/abid_hassan_titash/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span><h3>Instagram</h3><p>Abid Hassan</p></a>
     <a class="card tilt" href="https://www.youtube.com/@a.h.t.gamingy.t.31" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></span><h3>YouTube</h3><p>Abid Hassan</p></a>
   </div>
 <form class="card cform rv" id="cform" novalidate>
     <h3 class="tt" data-bn="একটি মেসেজ <span class='g2'>পাঠান</span>">Send a <span class="g2">message</span></h3>
-    <div class="frow"><input class="lq" name="name" placeholder="Your name" data-bnph="আপনার নাম" required><input class="lq" name="contact" placeholder="Email or WhatsApp" data-bnph="ইমেইল বা হোয়াটসঅ্যাপ" required></div>
-    <select class="lq" name="package"><option>General question</option><option>Basic Clean</option><option>Full Optimize</option><option>Gaming Tune</option></select>
+    <div class="frow"><input class="lq" name="name" placeholder="Your name" data-bnph="আপনার নাম" required><input class="lq" name="contact" placeholder="Gmail or WhatsApp" data-bnph="জিমেইল বা হোয়াটসঅ্যাপ" required></div>
+    <select class="lq" name="topic" id="ftopic"><option value="">General question</option></select>
     <textarea class="lq" name="message" rows="4" placeholder="Tell me about your PC and what you need" data-bnph="আপনার পিসি ও কী দরকার তা লিখুন" required></textarea>
     <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
     <button class="btn p" type="submit" data-bn="মেসেজ পাঠান">Send message</button>
-    <p class="fine" id="fmsg"></p>
+    <p class="fine" id="fmsg" aria-live="polite"></p>
   </form>
 </section>
 <footer>© 2026 World of A31d. All rights reserved.</footer>
@@ -991,21 +1001,22 @@ tabs.onclick=e=>{
 
 /* ===== v16 JS =====
    CONFIG: after downloading the file, edit these values.
+   ORDER = link opened by the Order buttons (your Discord invite)
+   RATE = BDT per 1 USD, used for the BDT prices (update when the rate changes)
    WA = WhatsApp number with country code, digits only (example: "8801XXXXXXXXX")
    TG = Telegram username without @
    FORM = your Formspree form id (from formspree.io), for the contact form
-   PRICES = text shown on each package, e.g. "1000 BDT"
    VT = VirusTotal report links for each library tab */
-const CFG={WA:"",TG:"",FORM:"",EMAIL:"ahtgamingyt2@gmail.com",PRICES:{basic:"",full:"",gaming:""},VT:{cmd:"",ps:"",reg:"",app:""}};
+const CFG={ORDER:"https://discord.gg/C9Kn8nqquu",WA:"",TG:"",FORM:"",EMAIL:"ahtgamingyt2@gmail.com",RATE:123,VT:{cmd:"",ps:"",reg:"",app:""}};
 (function(){
   const sv=document.getElementById("services");sv.appendChild(document.getElementById("pk"));
   /* order links + prices */
-  const msg=p=>`Hi A31d, I am interested in the ${p} package.`;
-  document.querySelectorAll(".order").forEach(a=>{const p=a.dataset.pkg;
-    if(CFG.WA){a.href=`https://wa.me/${CFG.WA}?text=${encodeURIComponent(msg(p))}`;a.target="_blank";a.rel="noopener";a.textContent="Order on WhatsApp"}
-    else if(CFG.TG){a.href=`https://t.me/${CFG.TG}`;a.target="_blank";a.rel="noopener";a.textContent="Order on Telegram"}
-    else{a.href=`mailto:${CFG.EMAIL}?subject=${encodeURIComponent(p+" package")}&body=${encodeURIComponent(msg(p))}`;a.textContent="Order by email"}});
-  document.querySelectorAll("[data-price]").forEach(e=>{const v=CFG.PRICES[e.dataset.price];if(v){e.textContent=v;e.removeAttribute("data-bn")}});
+  document.querySelectorAll(".order").forEach(a=>{a.href=CFG.ORDER;a.target="_blank";a.rel="noopener"});
+  const fmt=(u,c)=>c==="usd"?"$"+u:"৳"+(Math.round(u*CFG.RATE/50)*50).toLocaleString("en-US");
+  const cur=document.getElementById("cur");
+  function price(c){document.querySelectorAll(".price").forEach(el=>{const u=+el.dataset.usd;el.innerHTML=`${fmt(u,c)}<small>≈ ${fmt(u,c==="usd"?"bdt":"usd")}</small>`;el.classList.remove("sw");void el.offsetWidth;el.classList.add("sw")})}
+  cur.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;cur.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));price(b.dataset.c)});
+  price("usd");
   /* whatsapp / telegram contact cards */
   const ct=document.querySelector(".contact");
   const add=(t,s,u)=>ct.insertAdjacentHTML("beforeend",`<a class="card tilt" href="${u}" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.3L3 20l1.3-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg></span><h3>${t}</h3><p>${s}</p></a>`);
@@ -1013,15 +1024,21 @@ const CFG={WA:"",TG:"",FORM:"",EMAIL:"ahtgamingyt2@gmail.com",PRICES:{basic:"",f
   if(CFG.TG)add("Telegram","@"+CFG.TG,"https://t.me/"+CFG.TG);
   bindTilt();
   /* contact form */
-  const fm=document.getElementById("cform"),fmsg=document.getElementById("fmsg");
+  const fm=document.getElementById("cform"),fmsg=document.getElementById("fmsg"),ft=document.getElementById("ftopic"),fmm=fm.elements.message;
+  const QS=[["Which package is right for my PC?","Hi A31d, which package is right for my PC? My PC model and specs are: "],["How long does the optimization take?","Hi A31d, how long does the optimization usually take?"],["Is it safe for my files and data?","Hi A31d, will the optimization keep my files and data safe?"],["Can you optimize an old or low-end PC?","Hi A31d, can you optimize an old or low-end PC? My PC specs are: "],["I have lag or low FPS in games","Hi A31d, I get lag and low FPS in games. My PC specs and the games I play are: "],["How do I pay?","Hi A31d, how can I pay for the service?"],["I need a custom package","Hi A31d, I need a custom package. What I need is: "]];
+  QS.forEach(([q],i)=>ft.insertAdjacentHTML("beforeend",`<option value="${i}">${q}</option>`));
+  ft.addEventListener("change",()=>{if(ft.value==="")return;fmm.value=QS[+ft.value][1];fmm.focus();fmm.setSelectionRange(fmm.value.length,fmm.value.length)});
+  const bn=()=>document.documentElement.lang==="bn";
   fm.addEventListener("submit",async e=>{e.preventDefault();
-    const d=new FormData(fm),n=(d.get("name")||"").trim(),c=(d.get("contact")||"").trim(),m=(d.get("message")||"").trim();
+    const d=new FormData(fm),n=(d.get("name")||"").trim(),c=(d.get("contact")||"").trim(),m=(d.get("message")||"").trim(),t=ft.value===""?"General question":QS[+ft.value][0];
     if(d.get("_gotcha"))return;
-    if(!n||!c||!m){fmsg.textContent="Please fill in your name, contact and message.";return}
-    const mail=()=>{fmsg.textContent="Opening your email app...";location.href=`mailto:${CFG.EMAIL}?subject=${encodeURIComponent("Website message: "+d.get("package"))}&body=${encodeURIComponent(`Name: ${n}\nContact: ${c}\nTopic: ${d.get("package")}\n\n${m}`)}`};
-    if(!CFG.FORM){mail();return}
-    fmsg.textContent="Sending...";
-    try{const r=await fetch("https://formspree.io/f/"+CFG.FORM,{method:"POST",headers:{Accept:"application/json"},body:d});if(r.ok){fm.reset();fmsg.textContent="Thanks! Your message was sent. I will reply soon."}else throw 0}catch(_){mail()}});
+    if(!n||!c||!m){fmsg.className="fine err";fmsg.textContent=bn()?"নাম, যোগাযোগের মাধ্যম ও মেসেজ লিখুন।":"Please fill in your name, contact and message.";return}
+    if(CFG.FORM){fmsg.className="fine";fmsg.textContent="Sending...";
+      try{d.set("topic",t);const r=await fetch("https://formspree.io/f/"+CFG.FORM,{method:"POST",headers:{Accept:"application/json"},body:d});if(r.ok){fm.reset();fmsg.className="fine ok";fmsg.textContent=bn()?"✔ মেসেজ পাঠানো হয়েছে! আমি শিগগিরই উত্তর দেব।":"✔ Message sent! I will reply soon.";return}}catch(_){}}
+    const url=`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CFG.EMAIL)}&su=${encodeURIComponent("Website message: "+t)}&body=${encodeURIComponent(`Name: ${n}\nContact: ${c}\n\n${m}`)}`;
+    const w=window.open(url,"_blank");if(w)w.opener=null;
+    fmsg.className="fine ok";
+    fmsg.innerHTML=(bn()?"✔ মেসেজ তৈরি! Gmail খুলেছে সবকিছু ভরা অবস্থায়। পাঠাতে সেখানে Send চাপুন। ":"✔ Message ready! Gmail opened with everything filled in. Press Send there to deliver it. ")+(w?"":`<a href="${url}" target="_blank" rel="noopener">Open Gmail</a>`)});
   /* virustotal link per tab */
   const lvt=document.getElementById("lvt"),lt=document.getElementById("ltabs");
   const updVT=()=>{const b=lt.querySelector(".on"),u=b&&CFG.VT[b.dataset.k];lvt.style.display=u?"":"none";if(u)lvt.href=u};
@@ -1062,7 +1079,7 @@ const CFG={WA:"",TG:"",FORM:"",EMAIL:"ahtgamingyt2@gmail.com",PRICES:{basic:"",f
     about:()=>"A31d: PC optimization enthusiast, learning web development and aiming for a career in software engineering.",
     tools:()=>"Scripts, registry tweaks and apps for PC optimization. Try: goto toolkit",
     services:()=>"Clean files, faster startup, RAM and CPU tuning, disk, drivers, malware removal, settings. Try: goto services",
-    packages:()=>"Basic Clean, Full Optimize, Gaming Tune. Try: goto services",
+    packages:()=>"Basic Optimization ($5), Full Optimization ($9), Gaming Tune ($12). Try: goto services",
     contact:()=>"Email: "+CFG.EMAIL+(CFG.WA?"\nWhatsApp: +"+CFG.WA:"")+(CFG.TG?"\nTelegram: @"+CFG.TG:""),
     whoami:()=>"visitor",sudo:()=>"A31d: permission denied. Nice try :)"};
   function run(l){P("$ "+l,"cmd");const [c,...a]=l.trim().split(/\s+/);if(!c)return;const k=c.toLowerCase();
@@ -1082,7 +1099,7 @@ const CFG={WA:"",TG:"",FORM:"",EMAIL:"ahtgamingyt2@gmail.com",PRICES:{basic:"",f
 /* language toggle */
 (function(){
   const BN={
-   "Home":"হোম","Services":"সার্ভিস","Resources":"রিসোর্স","Toolkit":"টুলকিট","Contact":"যোগাযোগ",
+   "Home":"হোম","Order":"অর্ডার","Services":"সার্ভিস","Resources":"রিসোর্স","Toolkit":"টুলকিট","Contact":"যোগাযোগ",
    "Hello, I’m the host of":"হ্যালো, আমি এই জগতের হোস্ট",
    "I’m a motivated learner with a passion for programming and web development. I build efficient, user-friendly projects and improve my skills every day.":"আমি প্রোগ্রামিং আর ওয়েব ডেভেলপমেন্টের প্রতি আগ্রহী একজন শিক্ষার্থী। আমি কার্যকর ও ব্যবহারবান্ধব প্রজেক্ট বানাই এবং প্রতিদিন নিজের দক্ষতা বাড়াই।",
    "My goal is a career in software engineering, contributing to innovative solutions.":"আমার লক্ষ্য সফটওয়্যার ইঞ্জিনিয়ারিংয়ে ক্যারিয়ার গড়া এবং নতুন সমাধানে অবদান রাখা।",
