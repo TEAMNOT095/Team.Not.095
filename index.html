@@ -503,6 +503,8 @@ html[lang="bn"] .hi,html[lang="bn"] .dots a::before,html[lang="bn"] .rg h4,html[
 .pkc li{line-height:1.45}
 #fmsg.ok{color:var(--accent)}#fmsg.err{color:#ff8a8a}
 #fmsg a{color:var(--accent);text-decoration:underline}
+/* fix: spotlight overlay must not block clicks */
+.card::before,.card::after{pointer-events:none}
 </style>
 </head>
 <body>
@@ -577,10 +579,10 @@ html[lang="bn"] .hi,html[lang="bn"] .dots a::before,html[lang="bn"] .rg h4,html[
       <div class="tabs lt" id="cur"><button type="button" class="on" data-c="usd">USD $</button><button type="button" data-c="bdt">BDT ৳</button></div>
       <div class="pkg">
         <div class="card pkc tilt"><h4 data-bn="বেসিক অপ্টিমাইজেশন">Basic Optimization</h4><div class="price" data-usd="5"></div>
-          <ul data-bn="<li>সিস্টেম ও টেম্প ফাইল পরিষ্কার</li><li>স্টার্টআপ অ্যাপ পরিষ্কার</li><li>ডিস্ক ক্লিনআপ</li>"><li>Clean system and temp files</li><li>Startup apps cleanup</li><li>Disk cleanup</li></ul>
+          <ul data-bn="<li>আপনার পিসি অনুযায়ী OS কনফিগার</li><li>সিস্টেম ও টেম্প ফাইল পরিষ্কার</li><li>স্টার্টআপ অ্যাপ ক্লিনার</li><li>ডিস্ক ক্লিনআপ</li><li>সার্ভিস অপ্টিমাইজেশন</li><li>ডিব্লোট: অপ্রয়োজনীয় অ্যাপ সরানো</li>"><li>Configure the OS according to your PC</li><li>Clean system and temp files</li><li>Startup apps cleaner</li><li>Disk cleanup</li><li>Services optimization</li><li>Debloat: remove unneeded apps</li></ul>
           <a class="btn order" data-pkg="Basic Optimization" href="#">Order</a></div>
         <div class="card pkc hot tilt"><span class="rib" data-bn="জনপ্রিয়">Popular</span><h4 data-bn="ফুল অপ্টিমাইজেশন">Full Optimization</h4><div class="price" data-usd="9"></div>
-          <ul data-bn="<li>বেসিক অপ্টিমাইজেশনের সবকিছু</li><li>ডিপ ক্লিনআপ: ক্যাশ, লগ ও আপডেটের বাড়তি ফাইল</li><li>স্টার্টআপ ও ব্যাকগ্রাউন্ড সার্ভিস টিউনিং</li><li>র‍্যাম ও সিপিইউ টিউনিং: প্রায়োরিটি, পাওয়ার প্ল্যান, কোর পার্কিং</li><li>ড্রাইভার চেক ও আপডেট: জিপিইউ, চিপসেট, নেটওয়ার্ক</li><li>ব্লোটওয়্যার ও অপ্রয়োজনীয় অ্যাপ সরানো</li><li>রেজিস্ট্রি ও সিস্টেম সেটিংস টিউনিং</li><li>ম্যালওয়্যার স্ক্যান ও সিকিউরিটি চেক</li><li>ডিস্ক অপ্টিমাইজেশন ও নেটওয়ার্ক ল্যাটেন্সি টুইক</li><li>যেকোনো পরিবর্তনের আগে রিস্টোর পয়েন্ট</li>"><li>Everything in Basic Optimization</li><li>Deep cleanup: caches, logs and update leftovers</li><li>Startup and background services tuning</li><li>RAM and CPU tuning: priority, power plan, core parking</li><li>Driver check and update: GPU, chipset, network</li><li>Bloatware and unused app removal</li><li>Registry and system settings tuning</li><li>Malware scan and security check</li><li>Disk optimization and network latency tweaks</li><li>Restore point before any change</li></ul>
+          <ul data-bn="<li>বেসিক অপ্টিমাইজেশনের সবকিছু</li><li>ডিপ ক্লিনআপ: ক্যাশ, লগ ও আপডেটের বাড়তি ফাইল</li><li>অ্যাডভান্সড সার্ভিস ও ব্যাকগ্রাউন্ড প্রসেস টিউনিং</li><li>র‍্যাম ও সিপিইউ টিউনিং: প্রায়োরিটি, পাওয়ার প্ল্যান, কোর পার্কিং</li><li>ড্রাইভার চেক ও আপডেট: জিপিইউ, চিপসেট, নেটওয়ার্ক</li><li>ডিপ ডিব্লোট: অ্যাপ, উইজেট ও অপশনাল উইন্ডোজ ফিচার</li><li>রেজিস্ট্রি ও সিস্টেম সেটিংস টিউনিং</li><li>ম্যালওয়্যার স্ক্যান ও সিকিউরিটি চেক</li><li>ডিস্ক অপ্টিমাইজেশন ও নেটওয়ার্ক ল্যাটেন্সি টুইক</li><li>যেকোনো পরিবর্তনের আগে রিস্টোর পয়েন্ট</li>"><li>Everything in Basic Optimization</li><li>Deep cleanup: caches, logs and update leftovers</li><li>Advanced services and background process tuning</li><li>RAM and CPU tuning: priority, power plan, core parking</li><li>Driver check and update: GPU, chipset, network</li><li>Deep debloat: apps, widgets and optional Windows features</li><li>Registry and system settings tuning</li><li>Malware scan and security check</li><li>Disk optimization and network latency tweaks</li><li>Restore point before any change</li></ul>
           <a class="btn p order" data-pkg="Full Optimization" href="#">Order</a></div>
         <div class="card pkc tilt"><h4 data-bn="গেমিং টিউন">Gaming Tune</h4><div class="price" data-usd="12"></div>
           <ul data-bn="<li>ফুল অপ্টিমাইজেশনের সবকিছু</li><li>ল্যাটেন্সি ও ইনপুট-ল্যাগ টুইক</li><li>FPS ও পিং টুইক</li><li>জিপিইউ সেটিংস ও ড্রাইভার প্রোফাইল</li><li>গেম মোড, টাইমার ও প্রায়োরিটি টিউনিং</li>"><li>Everything in Full Optimization</li><li>Latency and input-lag tweaks</li><li>FPS and ping tweaks</li><li>GPU settings and driver profile</li><li>Game mode, timer and priority tuning</li></ul>
@@ -1007,7 +1009,7 @@ tabs.onclick=e=>{
    TG = Telegram username without @
    FORM = your Formspree form id (from formspree.io), for the contact form
    VT = VirusTotal report links for each library tab */
-const CFG={ORDER:"https://discord.gg/C9Kn8nqquu",WA:"",TG:"",FORM:"",EMAIL:"ahtgamingyt2@gmail.com",RATE:123,VT:{cmd:"",ps:"",reg:"",app:""}};
+const CFG={ORDER:"https://discord.gg/C9Kn8nqquu",WA:"",TG:"",FORM:"xvkawzqj",EMAIL:"ahtgamingyt2@gmail.com",RATE:123,VT:{cmd:"",ps:"",reg:"",app:""}};
 (function(){
   const sv=document.getElementById("services");sv.appendChild(document.getElementById("pk"));
   /* order links + prices */
@@ -1034,7 +1036,7 @@ const CFG={ORDER:"https://discord.gg/C9Kn8nqquu",WA:"",TG:"",FORM:"",EMAIL:"ahtg
     if(d.get("_gotcha"))return;
     if(!n||!c||!m){fmsg.className="fine err";fmsg.textContent=bn()?"নাম, যোগাযোগের মাধ্যম ও মেসেজ লিখুন।":"Please fill in your name, contact and message.";return}
     if(CFG.FORM){fmsg.className="fine";fmsg.textContent="Sending...";
-      try{d.set("topic",t);const r=await fetch("https://formspree.io/f/"+CFG.FORM,{method:"POST",headers:{Accept:"application/json"},body:d});if(r.ok){fm.reset();fmsg.className="fine ok";fmsg.textContent=bn()?"✔ মেসেজ পাঠানো হয়েছে! আমি শিগগিরই উত্তর দেব।":"✔ Message sent! I will reply soon.";return}}catch(_){}}
+      try{d.set("topic",t);d.set("_subject","Website message: "+t);if(/@/.test(c))d.set("email",c);const r=await fetch("https://formspree.io/f/"+CFG.FORM,{method:"POST",headers:{Accept:"application/json"},body:d});if(r.ok){fm.reset();fmsg.className="fine ok";fmsg.textContent=bn()?"✔ মেসেজ পাঠানো হয়েছে! আমি শিগগিরই উত্তর দেব।":"✔ Message sent! I will reply soon.";return}}catch(_){}}
     const url=`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CFG.EMAIL)}&su=${encodeURIComponent("Website message: "+t)}&body=${encodeURIComponent(`Name: ${n}\nContact: ${c}\n\n${m}`)}`;
     const w=window.open(url,"_blank");if(w)w.opener=null;
     fmsg.className="fine ok";
